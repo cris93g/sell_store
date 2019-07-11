@@ -5,15 +5,18 @@ import NavBar from "./components/Navbar/NavBar";
 import Carou from "./components/Carou/Carou";
 import Footer from "./components/Footer/Footer";
 import Body from "./components/Body/Body";
+import { HashRouter as Router } from "react-router-dom";
+import routes from "./routes";
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Carou />
-      <Body />
-      <Footer />
-    </div>
-  );
+	return (
+		<Router>
+			<div className="App">
+				<NavBar />
+				{routes}
+				<Footer />
+			</div>
+		</Router>
+	);
 }
 
 export default App;
