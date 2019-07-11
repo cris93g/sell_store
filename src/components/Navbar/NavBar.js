@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { getUser } from "../../redux/ducks/userReducer";
+import Auth from "../Auth/Auth";
+
 import {
 	Collapse,
 	Navbar,
@@ -25,17 +25,13 @@ class NavBar extends Component {
 			isOpen: false
 		};
 	}
-	componentDidMount() {
-		this.props.getUser();
-	}
+
 	toggle() {
 		this.setState({
 			isOpen: !this.state.isOpen
 		});
 	}
 	render() {
-		const { REACT_APP_LOGIN, REACT_APP_LOGOUT } = process.env;
-
 		return (
 			<div>
 				<Navbar color="light" light expand="md">
@@ -46,9 +42,9 @@ class NavBar extends Component {
 							<NavItem>
 								<NavLink href="/">Components</NavLink>
 							</NavItem>
-
+							<Auth />
 							<NavItem>
-								<NavLink href={REACT_APP_LOGIN}>Log In</NavLink>
+								<NavLink>Log In</NavLink>
 							</NavItem>
 							<UncontrolledDropdown nav inNavbar>
 								<DropdownToggle nav caret>
@@ -68,9 +64,5 @@ class NavBar extends Component {
 		);
 	}
 }
-const mapStateToProps = state => state;
 
-export default connect(
-	mapStateToProps,
-	{ getUser }
-)(NavBar);
+export default NavBar;
