@@ -11,13 +11,13 @@ class Footer extends Component {
 			<div className="footer_wrapper">
 				{/* <br /> */}
 				<div className="icons_wrapper">
-					<i class="material-icons">account_circle</i>
+					<i className="material-icons">account_circle</i>
 					<Link to="/">
 						{" "}
-						<i class="material-icons md-60">home</i>
+						<i className="material-icons md-60">home</i>
 					</Link>
 
-					<i class="material-icons">shopping_cart</i>
+					<i className="material-icons">shopping_cart</i>
 				</div>
 			</div>
 		);
