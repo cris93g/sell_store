@@ -5,6 +5,7 @@ import Tvs from "./pages/Tvs/Tvs";
 import Acessorys from "./pages/Acessorys/Acessorys";
 import VideoGames from "./pages/VideoGames/VideoGames";
 import Phones from "./pages/Phones/Phones";
+import Item from "./pages/Item/Item";
 export default (
 	<Switch>
 		<Route component={Home} exact path="/" />
@@ -12,5 +13,6 @@ export default (
 		<Route component={Acessorys} exact path="/acessorys" />
 		<Route component={VideoGames} exact path="/videogames" />
 		<Route component={Phones} exact path="/phones" />
+		<Route component={Item} path="/item/:id" />
 	</Switch>
 );
