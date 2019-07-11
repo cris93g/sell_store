@@ -1,5 +1,18 @@
 .footer_wrapper {
-  width: 100%;
-  background-color: black;
-  height: 8vh;
+	width: 100%;
+	background-color: black;
+	height: 7.5vh;
+	display: flex;
+}
+.icons_wrapper {
+	height: 60%;
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+	color: white;
 }

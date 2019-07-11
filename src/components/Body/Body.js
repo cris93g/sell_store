@@ -2,24 +2,26 @@ import React, { Component } from "react";
 import "./Body.css";
 
 class Body extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div className="body_wrapper">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    );
-  }
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		return (
+			<div>
+				<h3>Products</h3>
+				<div className="body_wrapper">
+					<div className="upper_body">
+						<div className="left_upper" />
+						<div className="right_upper" />
+					</div>
+					<div className="lower_body">
+						<div className="left_lower" />
+						<div className="right_lower" />
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Body;
