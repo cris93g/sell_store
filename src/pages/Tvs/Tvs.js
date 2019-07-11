@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTv } from "../../redux/ducks/itemReducer";
+import Cards from "../../components/Cards/Cards";
 
 class Tvs extends Component {
   constructor(props) {
@@ -10,8 +11,12 @@ class Tvs extends Component {
     this.props.getTv();
   }
   render() {
-    console.log(this.props.itemReducer);
-    return <div>tvs</div>;
+    const { items } = this.props.itemReducer;
+    console.log(items);
+    itemsDisplay = items.map(item => {
+      return <Cards />;
+    });
+    return <div>{itemsDisplay}</div>;
   }
 }
 
