@@ -11,7 +11,7 @@ class Cart extends Component {
   }
   render() {
     console.log(this.props.itemReducer.cart);
-
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
     return (
       <div>
         {this.props.itemReducer.cart.length > 0
@@ -28,10 +28,14 @@ class Cart extends Component {
                       <br />
                     </Card>
                   </Wrapper>
+                  <div />
                 </div>
               );
             })
-          : "No Items in cart add some"}
+          : "No Items in cart add some"}{" "}
+        {this.props.itemReducer.cart.reduce((acc, val) => {
+          return acc + val.prices;
+        }, 0)}
       </div>
     );
   }
