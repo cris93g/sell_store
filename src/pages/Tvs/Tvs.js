@@ -28,7 +28,7 @@ class Tvs extends Component {
 											<p>{item.name}</p>
 											<p>{item.price}</p>
 											<Button color="danger" onClick={() => addToCart(item)}>
-												Buy!
+												AddToCart
 											</Button>
 											<Link to={`/item/${item.id}`}>
 												{" "}

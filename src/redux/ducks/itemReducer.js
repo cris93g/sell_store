@@ -1,6 +1,8 @@
 import axios from "axios";
 
 const GET_TV = "GET_TV";
+const GET_PHONE = "GET_PHONE";
+const GET_GAME = "GET_GAME";
 const GET_CART = "GET_CART";
 const ADD_TO_CART = "ADD_TO_CART";
 
@@ -8,6 +10,20 @@ export function getTv() {
 	return {
 		type: GET_TV,
 		payload: axios.get(`/api/tv`)
+	};
+}
+
+export function getPhone() {
+	return {
+		type: GET_TV,
+		payload: axios.get(`/api/phone`)
+	};
+}
+
+export function getGame() {
+	return {
+		type: GET_GAME,
+		payload: axios.get(`/api/game`)
 	};
 }
 
@@ -34,6 +50,17 @@ const initialState = {
 export default function itemReducer(state = initialState, action) {
 	switch (action.type) {
 		case `${GET_TV}_FULFILLED`:
+			return {
+				...state,
+				items: action.payload.data
+			};
+		case `${GET_PHONE}_FULFILLED`:
+			return {
+				...state,
+				items: action.payload.data
+			};
+
+		case `${GET_GAME}_FULFILLED`:
 			return {
 				...state,
 				items: action.payload.data
