@@ -7,6 +7,7 @@ import VideoGames from "./pages/VideoGames/VideoGames";
 import Phones from "./pages/Phones/Phones";
 import Item from "./pages/Item/Item";
 import Cart from "./pages/Cart/Cart";
+import Search from "./components/Search/Search";
 export default (
   <Switch>
     <Route component={Home} exact path="/" />
@@ -16,5 +17,6 @@ export default (
     <Route component={Phones} exact path="/phones" />
     <Route component={Item} path="/item/:id" />
     <Route component={Cart} path="/cart" />
+    <Route component={Search} path="/search" />
   </Switch>
 );
