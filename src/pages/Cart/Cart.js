@@ -54,7 +54,7 @@ class Cart extends Component {
 					  })
 					: "No Items in cart add some"}{" "}
 				<div>
-					<p>{` Your total is ${sum}`}</p>
+					<p>{` Your total is $${sum}`}</p>
 					{console.log(sum)}
 				</div>
 			</div>

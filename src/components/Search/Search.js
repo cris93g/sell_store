@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link, Redirect } from "react-router-dom";
 import routes from "../../routes";
+import { connect } from "react-redux";
 import Item from "../../pages/Item/Item";
-
+import { addToCart } from "../../redux/ducks/itemReducer";
+import { Button } from "reactstrap";
 class Search extends Component {
 	constructor(props) {
 		super(props);
@@ -62,6 +64,9 @@ class Search extends Component {
 
 									<p>{pro.price}</p>
 									<p>{pro.description}</p>
+									<Button color="danger" onClick={() => addToCart(pro)}>
+										AddToCart
+									</Button>
 								</div>
 							);
 					  })
@@ -70,5 +75,8 @@ class Search extends Component {
 		);
 	}
 }
-
-export default Search;
+const mapStateToProps = state => state;
+export default connect(
+	mapStateToProps,
+	{ addToCart }
+)(Search);
