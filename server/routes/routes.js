@@ -5,7 +5,8 @@ const {
   getProduct,
   getPhone,
   getGame,
-  getItem
+  getItem,
+  checkout
 } = require("../controllers/itemCtrl/itemCtrl");
 //state each route
 module.exports = app => {
@@ -16,4 +17,5 @@ module.exports = app => {
   app.post("/api/cart", addToCart);
   app.post("/api/item", getProduct);
   app.get("/api/products", getItem);
+  app.post("/api/checkout", checkout);
 };

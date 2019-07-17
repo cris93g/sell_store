@@ -8,6 +8,7 @@ import Phones from "./pages/Phones/Phones";
 import Item from "./pages/Item/Item";
 import Cart from "./pages/Cart/Cart";
 import Search from "./components/Search/Search";
+import Checkout from "./components/Checkout/Checkout";
 export default (
   <Switch>
     <Route component={Home} exact path="/" />
@@ -18,5 +19,6 @@ export default (
     <Route component={Item} path="/item/:id" />
     <Route component={Cart} path="/cart" />
     <Route component={Search} path="/search" />
+    <Route path="/checkout" component={Checkout} />
   </Switch>
 );

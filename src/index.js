@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { HashRouter } from "react-router-dom";
+import { StripeProvider } from "react-stripe-elements";
 
 ReactDOM.render(
-	<HashRouter>
-		<App />
-	</HashRouter>,
-	document.getElementById("root")
+  <HashRouter>
+    <StripeProvider apiKey="pk_test_rHNyCLcNmWfjMr4qI7ZFvavX">
+      <App />
+    </StripeProvider>
+  </HashRouter>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
