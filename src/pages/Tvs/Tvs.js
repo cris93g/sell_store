@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTv, addToCart } from "../../redux/ducks/itemReducer";
-import Cards from "../../components/Cards/Cards";
+
 import "./Tvs.css";
 import styled from "styled-components";
 import { Button } from "reactstrap";
@@ -19,9 +19,8 @@ class Tvs extends Component {
 			<div>
 				{this.props.itemReducer.items.length > 0
 					? this.props.itemReducer.items.map(item => {
-							console.log(item);
 							return (
-								<div className="card_page">
+								<div className="card_page" key={item.id}>
 									<Wrapper>
 										<Card>
 											<img src={item.picture} className="card_pic" />

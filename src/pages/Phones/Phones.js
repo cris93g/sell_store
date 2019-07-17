@@ -12,14 +12,12 @@ class Phones extends Component {
 		this.props.getPhone();
 	}
 	render() {
-		console.log(this.props);
 		return (
 			<div>
 				{this.props.itemReducer.items.length > 0
 					? this.props.itemReducer.items.map(item => {
-							console.log(item);
 							return (
-								<div className="card_page">
+								<div className="card_page" key={item.id}>
 									<Wrapper>
 										<Card>
 											<img src={item.picture} className="card_pic" />

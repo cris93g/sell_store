@@ -12,3 +12,13 @@ a:hover {
 
 	cursor: pointer;
 }
+#root
+	> form
+	> div
+	> div.CardField-input-wrapper.is-ready-to-slide
+	> span.CardField-number.CardField-child
+	> span:nth-child(2)
+	> span
+	> input {
+	margin-left: 10%;
+}

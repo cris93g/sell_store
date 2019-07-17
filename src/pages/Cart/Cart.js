@@ -3,10 +3,6 @@ import { connect } from "react-redux";
 import { getCart } from "../../redux/ducks/itemReducer";
 import styled from "styled-components";
 class Cart extends Component {
-	constructor(props) {
-		super(props);
-		// this.add = this.add.bind(this);
-	}
 	componentDidMount() {
 		this.props.getCart();
 	}
@@ -28,7 +24,7 @@ class Cart extends Component {
 			sum = num.reduce((acc, val) => {
 				return acc + val;
 			}, 0);
-			console.log(sum);
+
 			return sum;
 		}
 		add(cart);
@@ -36,9 +32,8 @@ class Cart extends Component {
 			<div>
 				{this.props.itemReducer.cart.length > 0
 					? this.props.itemReducer.cart.map(item => {
-							console.log(item);
 							return (
-								<div className="card_page">
+								<div className="card_page" key={item.id}>
 									<Wrapper>
 										<Card>
 											<img src={item.picture} className="card_pic" />
@@ -55,7 +50,6 @@ class Cart extends Component {
 					: "No Items in cart add some"}{" "}
 				<div>
 					<p>{` Your total is $${sum}`}</p>
-					{console.log(sum)}
 				</div>
 			</div>
 		);

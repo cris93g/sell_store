@@ -24,7 +24,7 @@ class Item extends React.Component {
 		const { product } = this.state;
 		let displayProduct = product.map(pro => {
 			return (
-				<div>
+				<div key={pro.id}>
 					<img src={pro.picture} className="card_pic" alt="products" />
 					<p>{pro.name}</p>
 
