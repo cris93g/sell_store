@@ -21,6 +21,6 @@ export default (
 		<Route component={Cart} path="/cart" />
 		<Route component={Search} path="/search" />
 		<Route component={WishList} path="/wishlist" />
-		<Route path="/checkout" component={Checkout} />
+		<Route component={Checkout} path="/checkout" />
 	</Switch>
 );
