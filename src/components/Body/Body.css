@@ -1,70 +1,112 @@
-.body_wrapper {
-	width: 100%;
-	height: 42vh;
-	margin: auto;
-}
-.upper_body {
-	width: 80vw;
-	margin: auto;
-	height: 40%;
-	margin-top: 10%;
-	display: flex;
-	border-bottom: 1px solid black;
-}
-.lower_body {
-	width: 80vw;
-	margin: auto;
-	height: 40%;
-	display: flex;
-}
-.left_upper {
-	width: 50%;
-	height: 100%;
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .body_wrapper {
+    width: 100%;
+    height: 42vh;
+    margin: auto;
+  }
+  .upper_body {
+    width: 80vw;
+    margin: auto;
+    height: 40%;
+    margin-top: 10%;
+    display: flex;
+    border-bottom: 1px solid black;
+  }
+  .lower_body {
+    width: 80vw;
+    margin: auto;
+    height: 40%;
+    display: flex;
+  }
+  .left_upper {
+    width: 50%;
+    height: 100%;
+  }
 
-/* .img__description {
-	color: white;
-	font-size: 20px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-} */
-.right_upper {
-	width: 50%;
-	height: 100%;
-	border-left: 1px solid black;
-}
+  .right_upper {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid black;
+  }
 
-/* .img__description {
-	background: rgba(29, 106, 154, 0.72);
-	color: rgb(168, 26, 26);
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 0.2s, visibility 0.2s;
-} */
-.left_lower {
-	width: 50%;
-	height: 100%;
-}
+  .left_lower {
+    width: 50%;
+    height: 100%;
+  }
 
-.right_lower {
-	width: 50%;
-	height: 100%;
-	border-left: 1px solid black;
-}
-.landingImages {
-	max-width: 80%;
-}
-.landingImages2 {
-	max-width: 45%;
-}
+  .right_lower {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid black;
+  }
+  .landingImages {
+    max-width: 80%;
+  }
+  .landingImages2 {
+    max-width: 45%;
+  }
 
-.landingImages3 {
-	max-width: 80%;
-}
+  .landingImages3 {
+    max-width: 80%;
+  }
 
-.landingImages4 {
-	max-width: 120%;
+  .landingImages4 {
+    max-width: 120%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .body_wrapper {
+    width: 100%;
+    height: 42vh;
+    margin: auto;
+  }
+  .upper_body {
+    width: 80vw;
+    margin: auto;
+    height: 40%;
+    margin-top: 10%;
+    display: flex;
+    border-bottom: 1px solid black;
+  }
+  .lower_body {
+    width: 80vw;
+    margin: auto;
+    height: 40%;
+    display: flex;
+  }
+  .left_upper {
+    width: 50%;
+    height: 100%;
+  }
+
+  .right_upper {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid black;
+  }
+
+  .left_lower {
+    width: 50%;
+    height: 100%;
+  }
+
+  .right_lower {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid black;
+  }
+  .landingImages {
+    max-width: 80%;
+  }
+  .landingImages2 {
+    max-width: 45%;
+  }
+
+  .landingImages3 {
+    max-width: 80%;
+  }
+
+  .landingImages4 {
+    max-width: 120%;
+  }
 }

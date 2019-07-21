@@ -1,71 +1,63 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Auth from "../Auth/Auth";
-
 import {
-	Collapse,
-	Navbar,
-	NavbarToggler,
-	NavbarBrand,
-	Nav,
-	NavItem,
-	NavLink,
-	UncontrolledDropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem
-} from "reactstrap";
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBCollapse,
+  MDBContainer,
+  MDBHamburgerToggler
+} from "mdbreact";
 
-class NavBar extends Component {
-	constructor(props) {
-		super(props);
+class Navbar extends Component {
+  state = {
+    collapse1: false,
+    collapseID: ""
+  };
 
-		this.toggle = this.toggle.bind(this);
-		this.state = {
-			isOpen: false
-		};
-	}
+  toggleCollapse = collapseID => () => {
+    this.setState(prevState => ({
+      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+    }));
+  };
 
-	toggle() {
-		this.setState({
-			isOpen: !this.state.isOpen
-		});
-	}
-	render() {
-		return (
-			<div>
-				<Navbar color="light" light expand="md">
-					<NavbarBrand href="/">Cristian Spot</NavbarBrand>
-					<NavbarToggler onClick={this.toggle} />
-					<Collapse isOpen={this.state.isOpen} navbar>
-						<Nav className="ml-auto" navbar>
-							<NavItem>
-								<NavLink href="/">Components</NavLink>
-							</NavItem>
-							{/* <Auth /> */}
-							<NavItem>
-								<NavLink>Log In</NavLink>
-							</NavItem>
-							<UncontrolledDropdown nav inNavbar>
-								<DropdownToggle nav caret>
-									Options
-								</DropdownToggle>
-								<DropdownMenu right>
-									<Link to="/search">
-										{" "}
-										<DropdownItem>Option 1</DropdownItem>
-									</Link>
-									<DropdownItem>Option 2</DropdownItem>
-									<DropdownItem divider />
-									<DropdownItem>Reset</DropdownItem>
-								</DropdownMenu>
-							</UncontrolledDropdown>
-						</Nav>
-					</Collapse>
-				</Navbar>
-			</div>
-		);
-	}
+  toggleSingleCollapse = collapseId => {
+    this.setState({
+      ...this.state,
+      [collapseId]: !this.state[collapseId]
+    });
+  };
+
+  render() {
+    return (
+      <MDBContainer>
+        <MDBNavbar color="black" style={{ marginTop: "0px" }} light>
+          <MDBContainer>
+            <MDBNavbarBrand>SellSpot</MDBNavbarBrand>
+            <MDBHamburgerToggler
+              color="black"
+              id="hamburger1"
+              onClick={() => this.toggleSingleCollapse("collapse1")}
+            />
+            <MDBCollapse isOpen={this.state.collapse1} navbar>
+              <MDBNavbarNav left>
+                <MDBNavItem active>
+                  <MDBNavLink to="/">Home</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink to="/cart">Cart</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink to="/search">Search</MDBNavLink>
+                </MDBNavItem>
+              </MDBNavbarNav>
+            </MDBCollapse>
+          </MDBContainer>
+        </MDBNavbar>
+      </MDBContainer>
+    );
+  }
 }
 
-export default NavBar;
+export default Navbar;

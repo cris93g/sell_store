@@ -1,24 +1,28 @@
 .App {
-	text-align: center;
+  text-align: center;
 }
 
 a {
-	color: white;
-	/* text-decoration: none; */
+  color: white;
+  /* text-decoration: none; */
 }
 
 a:hover {
-	color: white;
+  color: white;
 
-	cursor: pointer;
+  cursor: pointer;
 }
 #root
-	> form
-	> div
-	> div.CardField-input-wrapper.is-ready-to-slide
-	> span.CardField-number.CardField-child
-	> span:nth-child(2)
-	> span
-	> input {
-	margin-left: 10%;
+  > form
+  > div
+  > div.CardField-input-wrapper.is-ready-to-slide
+  > span.CardField-number.CardField-child
+  > span:nth-child(2)
+  > span
+  > input {
+  margin-left: 10%;
+}
+
+.navbar navbar-light amber lighten-4 {
+  margin: 0;
 }
