@@ -31,7 +31,7 @@ class VideoGames extends Component {
                       </Link>
                       <Link to={`/item/${item.id}`}>
                         {" "}
-                        <Button color="danger">check item</Button>
+                        <Button color="info">check item</Button>
                       </Link>
                       <br />
                     </Card>

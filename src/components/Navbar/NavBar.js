@@ -9,6 +9,7 @@ import {
   MDBContainer,
   MDBHamburgerToggler
 } from "mdbreact";
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   state = {
@@ -34,7 +35,9 @@ class Navbar extends Component {
       <MDBContainer>
         <MDBNavbar color="black" style={{ marginTop: "0px" }} light>
           <MDBContainer>
-            <MDBNavbarBrand>SellSpot</MDBNavbarBrand>
+            <Link to="/">
+              <MDBNavbarBrand>SellSpot</MDBNavbarBrand>
+            </Link>
             <MDBHamburgerToggler
               color="black"
               id="hamburger1"

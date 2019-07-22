@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getCart } from "../../redux/ducks/itemReducer";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
 class Cart extends Component {
   componentDidMount() {
     this.props.getCart();
@@ -53,6 +55,9 @@ class Cart extends Component {
             <p>{` Your total is $${sum}`}</p>
           </TotalWrapper>
         </div>
+        <Link to={"/checkout"}>
+          <Button color="success">Confirm and Pay</Button>
+        </Link>
       </div>
     );
   }
