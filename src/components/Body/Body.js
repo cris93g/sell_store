@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Body.css";
 import { Link } from "react-router-dom";
+import Featured from "../Featured/Featured";
 class Body extends Component {
 	constructor(props) {
 		super(props);

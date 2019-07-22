@@ -11,18 +11,18 @@ const items = [
 	},
 	{
 		src:
-			"https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=2089&q=80",
+			"https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&h=760&q=80",
 		altText: "Slide 2",
 		caption: "Slide 2",
 		header: "Slide 2 Header"
+	},
+	{
+		src:
+			"https://images.unsplash.com/photo-1511227682637-ddb98c43c42c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&h=1088&q=80",
+		altText: "Slide 3",
+		caption: "Slide 3",
+		header: "Slide 3 Header"
 	}
-	// {
-	// 	src:
-	// 		"https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1879&q=80",
-	// 	altText: "Slide 3",
-	// 	caption: "Slide 3",
-	// 	header: "Slide 3 Header"
-	// }
 ];
 
 const Carou = () => <UncontrolledCarousel items={items} />;

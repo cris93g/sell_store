@@ -7,6 +7,14 @@ const GET_CART = "GET_CART";
 const ADD_TO_CART = "ADD_TO_CART";
 const SET_TOTAL = "SET_TOTAL";
 const GET_ACCESORY = "GET_ACCESORY";
+const GET_ALL = "GET_ALL";
+
+export function getAll() {
+	return {
+		type: GET_ALL,
+		payload: axios.get(`/api/products`)
+	};
+}
 
 export function getTv() {
 	return {
@@ -63,6 +71,11 @@ const initialState = {
 export default function itemReducer(state = initialState, action) {
 	switch (action.type) {
 		case `${GET_TV}_FULFILLED`:
+			return {
+				...state,
+				items: action.payload.data
+			};
+		case `${GET_ALL}_FULFILLED`:
 			return {
 				...state,
 				items: action.payload.data
